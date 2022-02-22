@@ -1,4 +1,4 @@
-public class KnightProblem {
+public class Chessboard {
     private int size;
     private int numberOfMoves = 0;
 
@@ -8,7 +8,7 @@ public class KnightProblem {
     private int[][] chessboard;
     private int[][] cellOccupied;
 
-    public KnightProblem(int size) {
+    public Chessboard(int size) {
         this.size = size;
         chessboard = new int[size][size];
         cellOccupied = new int[size][size];
