@@ -5,8 +5,8 @@ public class KnightProblem {
     final int VACANT = 0;
     final int OCCUPIED = 1;
 
-    private int chessboard[][];
-    private int cellOccupied[][];
+    private int[][] chessboard;
+    private int[][] cellOccupied;
 
     public KnightProblem(int size) {
         this.size = size;
@@ -30,8 +30,8 @@ public class KnightProblem {
         chessboard[column][row] = numberOfMoves;
 
         //Coordinates for possible moves
-        int columnMove[] = {2, 2, -1, 1, -2, -2, -1, 1};
-        int rowMove[] = {-1, 1, 2, 2, -1, 1, -2, -2};
+        int[] columnMove = {2, 2, -1, 1, -2, -2, -1, 1};
+        int[] rowMove = {-1, 1, 2, 2, -1, 1, -2, -2};
 
         //Trying all 8 legal moves for the knight
         for (int k = 0; k < 8; k++) {
@@ -56,14 +56,14 @@ public class KnightProblem {
     }
 
     public String toString() {
-        String output = "\n";
+        StringBuilder output = new StringBuilder("\n");
 
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                output += chessboard[i][j] + " ";
+                output.append(chessboard[i][j]).append(" ");
             }
-            output += "\n";
+            output.append("\n");
         }
-        return output;
+        return String.valueOf(output);
     }
 }
