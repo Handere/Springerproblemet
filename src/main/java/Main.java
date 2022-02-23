@@ -12,7 +12,7 @@ public class Main {
         System.out.print("Chessboard size: ");
         chessboardSize = scanner.nextInt();
 
-        // Read the starting position of the knight
+        // Read the starting position of the knight. Top left: 0.0
         System.out.print("Starting column: ");
         startingColumn = scanner.nextInt();
 
