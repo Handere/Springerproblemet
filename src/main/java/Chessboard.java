@@ -16,6 +16,11 @@ public class Chessboard {
 
     public boolean findSolution(int column, int row) {
 
+        //Start of round, setting the current position as occupied and adding the last move
+        numberOfMoves++;
+        cellOccupied[column][row] = OCCUPIED;
+        chessboard[column][row] = numberOfMoves;
+
         //Stop criteria
         if (numberOfMoves == (size * size)) {
             chessboard[column][row] = numberOfMoves;
@@ -23,11 +28,6 @@ public class Chessboard {
 
             return true;
         }
-
-        //Start of round, marking the current position as occupied and adding the number of moves
-        numberOfMoves++;
-        cellOccupied[column][row] = OCCUPIED;
-        chessboard[column][row] = numberOfMoves;
 
         //Coordinates for possible moves
         int[] columnMove = {2, 2, -1, 1, -2, -2, -1, 1};
