@@ -1,2 +1,2 @@
 # Implementation of The Knight's tour problem
-School project
+School project HIOF 2022
